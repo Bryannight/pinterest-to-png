@@ -43,3 +43,7 @@ Exemplos:
 - requests — para fazer requisições HTTP
 - Pillow — para abrir e converter imagens
 - beautifulsoup4 — para extrair dados do HTML da página
+
+
+## aviso
+- toda vez que o usuario colocar outra url de uma nova imagem, a pasta onde a imagem interior, sera trocada e terá apenas aquela imagem na pasta. Isso foi feito intencionalmente para que não acumule imagens inuteís.
