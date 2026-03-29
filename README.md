@@ -18,7 +18,7 @@ URL = "https://www.pinterest.com/pin/123456789/"
 
 3. Execute:
 
-python pinterest_to_png.py
+python3 pinterest_to_png.py
 
 ## Saída
 
