@@ -7,19 +7,19 @@ import os
 # URL do pin do Pinterest que você quer converter
 URL = "https://br.pinterest.com/pin/419960734028592872/"
 
-# Headers para simular um navegador real (evita bloqueio do Pinterest)
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36"
 }
 
 
 def buscar_url_da_imagem(url_pinterest):
-    """Acessa a página do Pinterest e extrai a URL direta da imagem."""
+   
 
     response = requests.get(url_pinterest, headers=HEADERS)
     soup = BeautifulSoup(response.text, "html.parser")
 
-    # O Pinterest usa a meta tag og:image com a URL da imagem principal
+   
     og_image = soup.find("meta", property="og:image")
 
     if og_image:
@@ -29,7 +29,7 @@ def buscar_url_da_imagem(url_pinterest):
 
 
 def baixar_imagem(url_imagem):
-    """Baixa a imagem a partir da URL e retorna um objeto PIL Image."""
+    
 
     response = requests.get(url_imagem, headers=HEADERS)
     imagem = Image.open(BytesIO(response.content))
@@ -38,7 +38,7 @@ def baixar_imagem(url_imagem):
 
 def converter_para_png(imagem, nome_arquivo):
     
-    os.makedirs('pngs', exist_ok=True) # cria pasta pngs se ela não existir
+  
 
     # Garante que a imagem está em RGB (necessário para salvar como PNG sem erros)
     if imagem.mode != "RGB":
@@ -49,7 +49,7 @@ def converter_para_png(imagem, nome_arquivo):
     print(f"Imagem salva como: {caminho}")
 
 
-# --- Execução principal ---
+
 
 url_imagem = buscar_url_da_imagem(URL)
 print(f"URL da imagem encontrada: {url_imagem}")
