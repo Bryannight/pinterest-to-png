@@ -22,7 +22,7 @@ python3 pinterest_to_png.py
 
 ## Saída
 
-A imagem convertida é salva automaticamente na pasta pngs/, que é criada caso não exista.
+A imagem convertida é salva automaticamente na pasta pngs/, que você cria manualmente.
 
 Para mudar o destino, edite essa linha no código:
 
